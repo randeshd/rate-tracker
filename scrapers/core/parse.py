@@ -48,11 +48,11 @@ def parse_pct(text: str) -> float | None:
 
 
 def table_after(soup: BeautifulSoup, pattern: str) -> list[list[str]]:
-    """Rows of the first table that follows text matching the regex pattern."""
+    """Rows of the table containing (or else first following) text matching the regex pattern."""
     node = soup.find(string=re.compile(pattern, re.I))
     if node is None:
         raise ValueError(f"heading not found: {pattern}")
-    table = node.find_next("table")
+    table = node.find_parent("table") or node.find_next("table")
     if table is None:
         raise ValueError(f"no table after: {pattern}")
     return table_rows(table)
