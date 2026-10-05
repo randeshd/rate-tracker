@@ -35,7 +35,7 @@ export function ceilingFor(ceiling: Ceiling, months: number): { nominal: number;
 }
 
 export function tenureLabel(rate: Rate): string {
-  return rate.days ? `${rate.days} days` : `${rate.tenure_months} ${rate.tenure_months === 1 ? "month" : "months"}`;
+  return rate.days ? `${rate.days} days` : monthsLabel(rate.tenure_months);
 }
 
 export const pct = (n: number) => `${n.toFixed(2)}%`;
@@ -61,4 +61,16 @@ export function institutionsAboveCeiling(institutions: Institution[], ceiling: C
         return c !== null && r.nominal_pct > c.nominal + 0.005;
       }),
   );
+}
+
+export function monthsLabel(months: number): string {
+  return `${months} ${months === 1 ? "month" : "months"}`;
+}
+
+/** Highest-AER offer across institutions, at one tenure or (without `months`) at any. */
+export function topOffer(institutions: Institution[], months?: number): Offer | null {
+  return institutions.reduce<Offer | null>((top, institution) => {
+    const rate = bestOffer(institution, months);
+    return rate && (!top || rate.aer_pct > top.rate.aer_pct) ? { institution, rate } : top;
+  }, null);
 }
