@@ -817,21 +817,22 @@ ol {
     font-size: 12px;
   }
 
-  /* Fades and blurs the list as it passes under the tab bar */
+  /*
+   * Fades the list out as it passes under the tab bar. It runs past the bottom
+   * edge so the list stays hidden behind a browser toolbar that overlays the page.
+   */
   .page::after {
+    --overhang: 200px;
+    --solid: calc(var(--overhang) + 50px + env(safe-area-inset-bottom, 0px));
     content: "";
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: calc(-1 * var(--overhang));
     z-index: 9;
-    height: calc(128px + env(safe-area-inset-bottom, 0px));
+    height: calc(var(--solid) + 64px);
     pointer-events: none;
-    background: linear-gradient(to top, var(--ground) 15%, transparent);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    -webkit-mask-image: linear-gradient(to top, #000 55%, transparent);
-    mask-image: linear-gradient(to top, #000 55%, transparent);
+    background: linear-gradient(to top, var(--ground) var(--solid), transparent);
   }
 
   .tabbar {
