@@ -389,17 +389,6 @@
       "last_success": "2026-10-05T21:37:40+05:30",
       "error": ""
     },
-    "pan_asia": {
-      "id": "pan_asia",
-      "name": "Pan Asia Bank",
-      "type": "bank",
-      "source_url": "https://www.pabcbank.com/rates-tariffs/",
-      "checked_at": "2026-10-05T21:37:40+05:30",
-      "status": "no_data",
-      "rates": [],
-      "last_success": "",
-      "error": "RuntimeError: site blocks automated access (bot-protection challenge)"
-    },
     "lb_finance": {
       "id": "lb_finance",
       "name": "LB Finance",

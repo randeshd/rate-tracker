@@ -30,7 +30,6 @@ LRA_NAMES = {
     "seylan": r"Seylan Bank",
     "ndb": r"National Development Bank",
     "dfcc": r"DFCC Bank",
-    "pan_asia": r"Pan Asia Banking",
     "lb_finance": r"LB Finance",
     "lolc_finance": r"LOLC Finance",
     "central_finance": r"Central Finance",

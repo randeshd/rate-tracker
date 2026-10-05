@@ -3,7 +3,7 @@ from importlib import import_module
 
 MODULES = [
     # banks
-    "peoples_bank", "hnb", "seylan", "ndb", "dfcc", "pan_asia",
+    "peoples_bank", "hnb", "seylan", "ndb", "dfcc",
     # finance companies
     "lb_finance", "lolc_finance", "central_finance", "plc", "cdb", "singer_finance",
     "siyapatha", "hnb_finance", "mercantile", "vallibel",

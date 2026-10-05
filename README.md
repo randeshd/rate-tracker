@@ -18,7 +18,7 @@ Private web app comparing Sri Lankan fixed deposit rates (interest paid at matur
 | `data/latest.json` | Latest rates per institution, with status (`ok`, `stale`, `no_data`) |
 | `data/history/rates.csv` | One row per institution, tenure and day |
 | `data/ratings.json` | Credit ratings (Lanka Rating Agency list; Fitch as disclosed by each institution) |
-| `data/cbsl.json` | CBSL maximum deposit rates for finance companies, derived from T-bill yields |
+| `data/cbsl.json` | CBSL maximum deposit rates for finance companies, T-bill average plus the margins in CBSL Directions No. 01 of 2026 |
 
 AER for interest at maturity: `(1 + r*t)^(1/t) - 1`, with `t` the term in years.
 
@@ -27,7 +27,7 @@ AER for interest at maturity: `(1 + r*t)^(1/t) - 1`, with `t` the term in years.
 - robots.txt is checked and crawl delays are honoured (minimum 3 seconds between requests to a site).
 - Each page is requested at most once per day (responses are cached in `.cache/`).
 - If a scraper fails, the last good rates are kept and the institution is marked stale.
-- Sites that block automated access are not bypassed; they show as "no data" (currently Pan Asia Bank).
+- Sites that block automated access are not bypassed.
 
 ## Run locally
 
