@@ -8,7 +8,7 @@ from urllib.robotparser import RobotFileParser
 
 import requests
 
-USER_AGENT = "InvestmentTrackerBot/1.0 (personal fixed-deposit rate comparison; one request per page per day)"
+USER_AGENT = "RateTrackerBot/1.0 (personal fixed-deposit rate comparison; one request per page per day)"
 DEFAULT_DELAY = 3.0  # seconds between requests to the same host
 TIMEOUT = 40
 CACHE_DIR = Path(__file__).resolve().parents[2] / ".cache"

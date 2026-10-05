@@ -5,7 +5,7 @@ import "./globals.css";
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Investment Tracker",
+  title: "Rate Tracker",
   robots: { index: false, follow: false },
 };
 

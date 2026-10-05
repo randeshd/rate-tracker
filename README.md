@@ -1,4 +1,4 @@
-# Investment Tracker
+# Rate Tracker
 
 Private web app comparing Sri Lankan fixed deposit rates (interest paid at maturity, normal rates).
 

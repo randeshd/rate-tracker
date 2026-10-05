@@ -49,7 +49,7 @@ export default function Dashboard({ data }: { data: TrackerData }) {
   return (
     <main className="page">
       <header className="header">
-        <h1>Investment Tracker</h1>
+        <h1>Rate Tracker</h1>
         <span className="updated">
           Updated {shortDate(data.updatedAt) || "—"}
         </span>
