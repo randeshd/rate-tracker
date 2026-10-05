@@ -25,7 +25,7 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Scrape fixed deposit rates
         run: python -m scrapers.run
-      - name: Update CBSL ceiling (only does work once a quarter)
+      - name: Update CBSL ceiling and check for new CBSL directions
         run: python -m scrapers.cbsl
       - name: Commit updated data
         run: |
@@ -36,3 +36,5 @@ jobs:
           git commit -m "Update rates $(TZ=Asia/Colombo date +%F)"
           git pull --rebase
           git push
+      - name: Fail (and notify) if CBSL has published a new deposit-rate direction
+        run: python -m scrapers.cbsl --alert

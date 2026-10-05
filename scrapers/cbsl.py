@@ -9,10 +9,18 @@ to licensed finance companies, not banks.
 T-bill yields are read from CBSL's Weekly Economic Indicators (published on Fridays,
 covering that week's auction).
 
-Usage: python -m scrapers.cbsl
+The margins come from the directions themselves, which CBSL publishes as scanned PDFs, so
+they are written into BANDS below. To catch a future amendment, every run also checks
+CBSL's list of directions: a deposit-rate direction that is not in KNOWN_DIRECTIONS is
+recorded in data/cbsl.json (the web page then shows a warning) and `--alert` exits with an
+error so the GitHub Actions run fails and sends a notification.
+
+Usage: python -m scrapers.cbsl [--alert]
 """
 import io
 import re
+import sys
+from urllib.parse import urljoin
 from datetime import date, datetime, timedelta, timezone
 from decimal import ROUND_HALF_UP, Decimal
 
@@ -21,10 +29,18 @@ import requests
 
 from .core import store
 from .core.fetch import fetch
+from .core.parse import soup_of, clean
 
 DIRECTION_URL = "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/laws/cdg/snbfi_finance_business_act_directions_no_1_of_2026_e.pdf"
 WEI_URL = "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_{:%Y%m%d}_e{}.pdf"
 CBSL_FILE = store.DATA_DIR / "cbsl.json"
+DIRECTIONS_LIST_URL = "https://www.cbsl.gov.lk/en/laws/directions-circulars-guidelines-for-non-banks"
+
+# Deposit-rate directions already reflected in BANDS (file names on CBSL's site)
+KNOWN_DIRECTIONS = {
+    "snbfi_finance_business_act_directions_no_1_of_2025_e.pdf",
+    "snbfi_finance_business_act_directions_no_1_of_2026_e.pdf",
+}
 
 # (from months, up to but excluding months, T-bill tenor in days, margin in % points)
 BANDS = [
@@ -105,25 +121,52 @@ def compute(today: date) -> dict:
     }
 
 
-def run() -> None:
+def unreviewed_directions() -> list[dict]:
+    """Deposit-rate directions on CBSL's list that BANDS does not account for yet."""
+    soup = soup_of(fetch(DIRECTIONS_LIST_URL))
+    found = {}
+    for link in soup.find_all("a", href=True):
+        title = clean(link.get_text())
+        if not re.search(r"interest rates? on deposits", title, re.I):
+            continue
+        url = urljoin(DIRECTIONS_LIST_URL, link["href"])
+        if url.rsplit("/", 1)[-1] not in KNOWN_DIRECTIONS:
+            found[url] = {"title": title, "url": url}
+    return list(found.values())
+
+
+def run(alert: bool = False) -> None:
     now = datetime.now(timezone(timedelta(hours=5, minutes=30)))
     current = store.load_json(CBSL_FILE, {})
     quarter, _ = previous_quarter(now.date())
     if current.get("based_on_quarter") == quarter and not current.get("stale"):
+        result = current
         print(f"CBSL ceiling already up to date ({quarter})")
-        return
+    else:
+        try:
+            result = compute(now.date())
+            result["updated_at"] = now.isoformat(timespec="seconds")
+            result["stale"] = False
+            print("CBSL ceiling:", ", ".join(f"{b['from_months']}-{b['to_months']}m={b['max_nominal_pct']}" for b in result["bands"]))
+        except Exception as e:  # keep the last good figures
+            if not current:
+                raise
+            result = {**current, "stale": True, "error": f"{type(e).__name__}: {e}"[:300]}
+            print("CBSL ceiling FAILED, keeping previous:", result["error"])
+
     try:
-        result = compute(now.date())
-        result["updated_at"] = now.isoformat(timespec="seconds")
-        result["stale"] = False
-        print("CBSL ceiling:", ", ".join(f"{b['from_months']}-{b['to_months']}m={b['max_nominal_pct']}" for b in result["bands"]))
-    except Exception as e:  # keep the last good figures
-        if not current:
-            raise
-        result = {**current, "stale": True, "error": f"{type(e).__name__}: {e}"[:300]}
-        print("CBSL ceiling FAILED, keeping previous:", result["error"])
+        result["unreviewed_directions"] = unreviewed_directions()
+        result["directions_checked_at"] = now.isoformat(timespec="seconds")
+    except Exception as e:
+        print(f"Could not check CBSL directions list: {type(e).__name__}: {e}")
     store.save_json(CBSL_FILE, result)
+
+    pending = result.get("unreviewed_directions", [])
+    for d in pending:
+        print(f"NEW CBSL DIRECTION, ceiling margins need review: {d['title']} {d['url']}")
+    if alert and pending:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
-    run()
+    run(alert="--alert" in sys.argv)
