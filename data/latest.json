@@ -399,7 +399,232 @@
       "rates": [],
       "last_success": "",
       "error": "RuntimeError: site blocks automated access (bot-protection challenge)"
+    },
+    "lb_finance": {
+      "id": "lb_finance",
+      "name": "LB Finance",
+      "type": "finance",
+      "source_url": "https://www.lbfinance.com/fixed-deposits/fixed-deposits",
+      "checked_at": "2026-10-05T21:28:30+05:30",
+      "status": "ok",
+      "rates": [
+        {
+          "tenure_months": 1,
+          "nominal_pct": 9.0,
+          "aer_pct": 9.3807,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 2,
+          "nominal_pct": 10.0,
+          "aer_pct": 10.4421,
+          "note": "50 days",
+          "days": 50
+        },
+        {
+          "tenure_months": 3,
+          "nominal_pct": 10.0,
+          "aer_pct": 10.3813,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 6,
+          "nominal_pct": 10.5,
+          "aer_pct": 10.7756,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 7,
+          "nominal_pct": 11.0,
+          "aer_pct": 11.2725,
+          "note": "200 days",
+          "days": 200
+        },
+        {
+          "tenure_months": 12,
+          "nominal_pct": 11.5,
+          "aer_pct": 11.5,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 13,
+          "nominal_pct": 12.25,
+          "aer_pct": 12.1903,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 15,
+          "nominal_pct": 11.5,
+          "aer_pct": 11.3435,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 18,
+          "nominal_pct": 11.5,
+          "aer_pct": 11.1924,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 24,
+          "nominal_pct": 12.75,
+          "aer_pct": 12.0268,
+          "note": "",
+          "days": null
+        }
+      ],
+      "last_success": "2026-10-05T21:28:30+05:30",
+      "error": ""
+    },
+    "lolc_finance": {
+      "id": "lolc_finance",
+      "name": "LOLC Finance",
+      "type": "finance",
+      "source_url": "https://www.lolcfinance.com/rates-and-returns/interest-rates/",
+      "checked_at": "2026-10-05T21:28:22+05:30",
+      "status": "ok",
+      "rates": [
+        {
+          "tenure_months": 1,
+          "nominal_pct": 7.72,
+          "aer_pct": 7.9991,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 3,
+          "nominal_pct": 8.24,
+          "aer_pct": 8.4981,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 4,
+          "nominal_pct": 8.27,
+          "aer_pct": 8.5001,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 6,
+          "nominal_pct": 8.57,
+          "aer_pct": 8.7536,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 7,
+          "nominal_pct": 8.6,
+          "aer_pct": 8.7534,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 12,
+          "nominal_pct": 9.0,
+          "aer_pct": 9.0,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 13,
+          "nominal_pct": 9.03,
+          "aer_pct": 8.9972,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 18,
+          "nominal_pct": 9.46,
+          "aer_pct": 9.2493,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 24,
+          "nominal_pct": 9.95,
+          "aer_pct": 9.4989,
+          "note": "",
+          "days": null
+        }
+      ],
+      "last_success": "2026-10-05T21:28:22+05:30",
+      "error": ""
+    },
+    "central_finance": {
+      "id": "central_finance",
+      "name": "Central Finance",
+      "type": "finance",
+      "source_url": "https://cf.lk/interest-rates/",
+      "checked_at": "2026-10-05T21:28:22+05:30",
+      "status": "ok",
+      "rates": [
+        {
+          "tenure_months": 1,
+          "nominal_pct": 7.5,
+          "aer_pct": 7.7633,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 3,
+          "nominal_pct": 8.5,
+          "aer_pct": 8.7748,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 6,
+          "nominal_pct": 10.0,
+          "aer_pct": 10.25,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 9,
+          "nominal_pct": 10.0,
+          "aer_pct": 10.123,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 12,
+          "nominal_pct": 11.5,
+          "aer_pct": 11.5,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 13,
+          "nominal_pct": 12.0,
+          "aer_pct": 11.9426,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 18,
+          "nominal_pct": 12.0,
+          "aer_pct": 11.6661,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 24,
+          "nominal_pct": 12.25,
+          "aer_pct": 11.5796,
+          "note": "",
+          "days": null
+        }
+      ],
+      "last_success": "2026-10-05T21:28:22+05:30",
+      "error": ""
     }
   },
-  "updated_at": "2026-10-05T21:26:47+05:30"
+  "updated_at": "2026-10-05T21:28:30+05:30"
 }
