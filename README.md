@@ -21,7 +21,8 @@ banks or finance companies:
   green, and the CBSL ceiling for finance companies on top.
 - **Best AER**: each institution's highest offer at any tenure.
 
-Summary cards show the best overall, best bank and best finance company rate for the chosen tenure.
+Summary cards show the best bank and best finance company rate for the chosen tenure, and on desktop
+the best overall rate across every institution and tenure.
 Each shows AER; click a card to switch it to the nominal rate p.a. and back.
 
 On phones (760px wide or less) the list becomes cards and the views move to a tab bar at the bottom.

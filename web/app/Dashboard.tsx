@@ -103,8 +103,8 @@ export default function Dashboard({ data }: { data: TrackerData }) {
   const scope = best ? undefined : grid ? sortBy : tenure;
   const byType = (t: Institution["type"]) =>
     data.institutions.filter((i) => i.type === t);
-  const overall = topOffer(data.institutions, scope);
-  // Phone header figure: fixed, whatever view, tenure or type is selected
+  // Best overall (card on desktop, header figure on phones): fixed, whatever
+  // view, tenure or type is selected
   const highest = topOffer(data.institutions);
 
   const newDirections = data.ceiling?.unreviewed_directions ?? [];
@@ -158,9 +158,9 @@ export default function Dashboard({ data }: { data: TrackerData }) {
           </div>
           <div className="cards">
             <SummaryCard
-              label="Best overall"
+              label="Best overall · any tenure"
               tone="lime overall"
-              offer={overall}
+              offer={highest}
             />
             <SummaryCard
               label="Best bank"
