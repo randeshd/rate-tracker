@@ -1,0 +1,179 @@
+{
+  "updated_at": "2026-10-05T21:36:54+05:30",
+  "institutions": {
+    "peoples_bank": [
+      {
+        "agency": "Lanka Rating Agency",
+        "rating": "AA",
+        "outlook": "Stable",
+        "date": "2024-09-06",
+        "source": "Lanka Rating Agency ratings list",
+        "source_url": "https://lra.com.lk/ratings/",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      }
+    ],
+    "hnb": [],
+    "seylan": [
+      {
+        "agency": "Fitch Ratings Lanka",
+        "rating": "A+(lka)",
+        "outlook": "Stable",
+        "date": "",
+        "source": "As stated on the institution's website",
+        "source_url": "https://www.seylan.lk/interest-rates",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      }
+    ],
+    "ndb": [
+      {
+        "agency": "Fitch Ratings Lanka",
+        "rating": "A-(lka)",
+        "outlook": "",
+        "date": "",
+        "source": "As stated on the institution's website",
+        "source_url": "https://www.ndbbank.com/rates/interest-rates-on-deposits",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      }
+    ],
+    "dfcc": [
+      {
+        "agency": "Fitch Ratings Lanka",
+        "rating": "A(lka)",
+        "outlook": "",
+        "date": "",
+        "source": "As stated on the institution's website",
+        "source_url": "https://www.dfcc.lk/rates-and-tariff?tab=fixed_deposits",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      }
+    ],
+    "pan_asia": [],
+    "lb_finance": [
+      {
+        "agency": "Fitch Ratings Lanka",
+        "rating": "A-(lka)",
+        "outlook": "Stable",
+        "date": "",
+        "source": "As stated on the institution's website",
+        "source_url": "https://www.lbfinance.com/fixed-deposits/fixed-deposits",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      },
+      {
+        "agency": "Lanka Rating Agency",
+        "rating": "A+",
+        "outlook": "Stable",
+        "date": "2026-01-28",
+        "source": "Lanka Rating Agency ratings list",
+        "source_url": "https://lra.com.lk/ratings/",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      }
+    ],
+    "lolc_finance": [
+      {
+        "agency": "Lanka Rating Agency",
+        "rating": "A+",
+        "outlook": "Stable",
+        "date": "2026-09-01",
+        "source": "Lanka Rating Agency ratings list",
+        "source_url": "https://lra.com.lk/ratings/",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      }
+    ],
+    "central_finance": [
+      {
+        "agency": "Fitch Ratings Lanka",
+        "rating": "A(lka)",
+        "outlook": "Stable",
+        "date": "",
+        "source": "As stated on the institution's website",
+        "source_url": "https://cf.lk/interest-rates/",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      }
+    ],
+    "plc": [
+      {
+        "agency": "Fitch Ratings Lanka",
+        "rating": "A(lka)",
+        "outlook": "Stable",
+        "date": "",
+        "source": "As stated on the institution's website",
+        "source_url": "https://www.plc.lk/products/fixed-deposits-savings/fixed-deposits/",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      }
+    ],
+    "cdb": [
+      {
+        "agency": "Fitch Ratings Lanka",
+        "rating": "BBB(lka)",
+        "outlook": "Stable",
+        "date": "",
+        "source": "As stated on the institution's website",
+        "source_url": "https://www.cdb.lk/rates-tariffs",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      },
+      {
+        "agency": "Lanka Rating Agency",
+        "rating": "A-",
+        "outlook": "Stable",
+        "date": "2026-08-07",
+        "source": "Lanka Rating Agency ratings list",
+        "source_url": "https://lra.com.lk/ratings/",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      }
+    ],
+    "singer_finance": [
+      {
+        "agency": "Fitch Ratings Lanka",
+        "rating": "BBB+(lka)",
+        "outlook": "",
+        "date": "",
+        "source": "As stated on the institution's website",
+        "source_url": "https://www.singerfinance.com/products/fixed-deposit/standard-fixed-deposits",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      }
+    ],
+    "siyapatha": [
+      {
+        "agency": "Fitch Ratings Lanka",
+        "rating": "A(lka)",
+        "outlook": "Stable",
+        "date": "",
+        "source": "As stated on the institution's website",
+        "source_url": "https://www.siyapatha.lk/fixed-deposits/",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      }
+    ],
+    "hnb_finance": [
+      {
+        "agency": "Fitch Ratings Lanka",
+        "rating": "A(lka)",
+        "outlook": "",
+        "date": "",
+        "source": "As stated on the institution's website",
+        "source_url": "https://www.hnbfinance.lk/fixed-deposits/",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      }
+    ],
+    "mercantile": [
+      {
+        "agency": "Fitch Ratings Lanka",
+        "rating": "BBB-(lka)",
+        "outlook": "Stable",
+        "date": "",
+        "source": "As stated on the institution's website",
+        "source_url": "https://www.mi.com.lk/index.php/en/products-and-services/main-products/fixed-deposit",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      }
+    ],
+    "vallibel": [
+      {
+        "agency": "Lanka Rating Agency",
+        "rating": "A-",
+        "outlook": "Stable",
+        "date": "2026-09-02",
+        "source": "Lanka Rating Agency ratings list",
+        "source_url": "https://lra.com.lk/ratings/",
+        "checked_at": "2026-10-05T21:36:54+05:30"
+      }
+    ]
+  }
+}
