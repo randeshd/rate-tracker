@@ -58,10 +58,6 @@ h1 {
   font-size: 24px;
   letter-spacing: -0.02em;
 }
-.sub {
-  margin: 4px 0 0;
-  color: var(--muted);
-}
 .updated {
   color: var(--muted);
   font-size: 13px;
@@ -245,8 +241,7 @@ tr.ceiling td {
   font-weight: 600;
 }
 
-.missing,
-.hint {
+.missing {
   color: var(--muted);
   font-size: 13px;
   margin: 12px 2px;
@@ -308,60 +303,4 @@ table.grid .nominal {
 }
 .sort.active {
   color: var(--accent);
-}
-
-.footer {
-  margin-top: 28px;
-  color: var(--muted);
-  font-size: 12px;
-  max-width: 900px;
-}
-.footer p {
-  margin: 6px 0;
-}
-
-.login {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 16px;
-}
-.login-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 28px;
-  width: 100%;
-  max-width: 340px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.login-card h1 {
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-.login-card label {
-  font-size: 13px;
-  color: var(--muted);
-}
-.login-card input {
-  font: inherit;
-  padding: 9px 11px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-}
-.login-card button {
-  margin-top: 6px;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 600;
-}
-.login-error {
-  margin: 0;
-  color: #b3261e;
-  font-size: 13px;
 }

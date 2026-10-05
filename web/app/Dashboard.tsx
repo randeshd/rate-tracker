@@ -39,9 +39,6 @@ export default function Dashboard({ data }: { data: TrackerData }) {
       <header className="header">
         <div>
           <h1>Investment Tracker</h1>
-          <p className="sub">
-            Sri Lankan fixed deposits · interest paid at maturity · normal rates · ranked by AER
-          </p>
         </div>
         <div className="updated">
           <div>Rates updated {shortDate(data.updatedAt) || "—"}</div>
@@ -88,20 +85,6 @@ export default function Dashboard({ data }: { data: TrackerData }) {
       )}
       {view === "best" && <BestView institutions={institutions} data={data} />}
       {view === "grid" && <GridView institutions={institutions} data={data} />}
-
-      <footer className="footer">
-        <p>
-          AER = (1 + r × t)<sup>1/t</sup> − 1, where r is the nominal annual rate and t the term in years. Terms
-          quoted in days use the exact day count.
-        </p>
-        <p>
-          CBSL ceiling: maximum nominal rate finance companies may pay (Finance Business Act Directions No. 01 of
-          2025), estimated from Treasury bill yields
-          {data.ceiling ? ` for ${data.ceiling.based_on_quarter}` : ""}. It does not apply to banks. For reference
-          only.
-        </p>
-        <p>Ratings are national scale. Rates are read from each institution’s website; confirm before investing.</p>
-      </footer>
     </main>
   );
 }
@@ -160,7 +143,7 @@ function TenureView({
                 <td>CBSL ceiling (finance companies)</td>
                 <td className="num">{pct(ceiling.nominal)}</td>
                 <td className="num">{pct(ceiling.aer)}</td>
-                <td colSpan={4}>Reference only</td>
+                <td colSpan={4} />
               </tr>
             )}
             {offers.map(({ institution, rate }, index) => (
@@ -212,7 +195,6 @@ function BestView({ institutions, data }: { institutions: Institution[]; data: T
           </div>
         ))}
       </div>
-      <p className="hint">Top AER at each standard tenure above; each institution’s single best offer below.</p>
 
       <div className="table-wrap">
         <table>
@@ -272,10 +254,6 @@ function GridView({ institutions, data }: { institutions: Institution[]; data: T
 
   return (
     <section>
-      <p className="hint">
-        AER with the nominal rate beneath. Click a tenure to sort. The highest AER in each column is highlighted; *
-        marks a special offer with conditions (see the By tenure view).
-      </p>
       <div className="table-wrap">
         <table className="grid">
           <thead>
@@ -310,7 +288,7 @@ function GridView({ institutions, data }: { institutions: Institution[]; data: T
                     </td>
                   );
                 })}
-                <td>Reference only</td>
+                <td />
               </tr>
             )}
             {rows.map((institution) => (
