@@ -816,6 +816,109 @@
       ],
       "last_success": "2026-10-05T21:29:40+05:30",
       "error": ""
+    },
+    "singer_finance": {
+      "id": "singer_finance",
+      "name": "Singer Finance",
+      "type": "finance",
+      "source_url": "https://www.singerfinance.com/products/fixed-deposit/standard-fixed-deposits",
+      "checked_at": "2026-10-05T21:29:40+05:30",
+      "status": "ok",
+      "rates": [
+        {
+          "tenure_months": 1,
+          "nominal_pct": 8.5,
+          "aer_pct": 8.8391,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 2,
+          "nominal_pct": 8.75,
+          "aer_pct": 9.0753,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 3,
+          "nominal_pct": 9.0,
+          "aer_pct": 9.3083,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 4,
+          "nominal_pct": 9.0,
+          "aer_pct": 9.2727,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 5,
+          "nominal_pct": 9.0,
+          "aer_pct": 9.2374,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 6,
+          "nominal_pct": 9.25,
+          "aer_pct": 9.4639,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 7,
+          "nominal_pct": 9.25,
+          "aer_pct": 9.4274,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 9,
+          "nominal_pct": 9.25,
+          "aer_pct": 9.3554,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 12,
+          "nominal_pct": 11.0,
+          "aer_pct": 11.0,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 13,
+          "nominal_pct": 11.0,
+          "aer_pct": 10.9516,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 15,
+          "nominal_pct": 11.0,
+          "aer_pct": 10.8565,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 18,
+          "nominal_pct": 11.0,
+          "aer_pct": 10.7178,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 24,
+          "nominal_pct": 11.5,
+          "aer_pct": 10.9054,
+          "note": "",
+          "days": null
+        }
+      ],
+      "last_success": "2026-10-05T21:29:40+05:30",
+      "error": ""
     }
   },
   "updated_at": "2026-10-05T21:29:40+05:30"
