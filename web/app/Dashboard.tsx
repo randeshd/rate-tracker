@@ -40,9 +40,11 @@ export default function Dashboard({ data }: { data: TrackerData }) {
   const grid = tenure === -1;
   const ceiling = best || grid ? null : ceilingFor(data.ceiling, tenure);
   const newDirections = data.ceiling?.unreviewed_directions ?? [];
-  const ceilingDoubt =
-    newDirections.length > 0 ||
-    institutionsAboveCeiling(data.institutions, data.ceiling) >= 3;
+  const aboveCeiling = institutionsAboveCeiling(
+    data.institutions,
+    data.ceiling,
+  );
+  const ceilingDoubt = newDirections.length > 0 || aboveCeiling.length > 0;
 
   return (
     <main className="page">
@@ -115,7 +117,9 @@ export default function Dashboard({ data }: { data: TrackerData }) {
             </>
           ) : (
             <>
-              Several finance companies are advertising above it. Check{" "}
+              {aboveCeiling.map((i) => i.name).join(", ")}{" "}
+              {aboveCeiling.length === 1 ? "is" : "are"} advertising above it.
+              Check{" "}
               <a href={DIRECTIONS_URL} target="_blank" rel="noreferrer">
                 CBSL&apos;s directions
               </a>{" "}
@@ -280,7 +284,12 @@ function Grid({
               {STANDARD_TENURES.map((m) => {
                 const rate = bestOffer(institution, m);
                 return (
-                  <td key={m} className="num">
+                  <td
+                    key={m}
+                    className={
+                      rate && rate.aer_pct === top[m] ? "num top" : "num"
+                    }
+                  >
                     {rate && (
                       <>
                         <div
