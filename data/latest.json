@@ -278,7 +278,18 @@
       ],
       "last_success": "2026-10-05T21:23:55+05:30",
       "error": ""
+    },
+    "ndb": {
+      "id": "ndb",
+      "name": "NDB Bank",
+      "type": "bank",
+      "source_url": "https://www.ndbbank.com/rates/interest-rates-on-deposits",
+      "checked_at": "2026-10-05T21:26:32+05:30",
+      "status": "no_data",
+      "rates": [],
+      "last_success": "",
+      "error": "ValueError: no rates found"
     }
   },
-  "updated_at": "2026-10-05T21:23:55+05:30"
+  "updated_at": "2026-10-05T21:26:32+05:30"
 }
