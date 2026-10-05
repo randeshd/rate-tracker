@@ -56,3 +56,12 @@ def table_after(soup: BeautifulSoup, pattern: str) -> list[list[str]]:
     if table is None:
         raise ValueError(f"no table after: {pattern}")
     return table_rows(table)
+
+
+def table_under_heading(soup: BeautifulSoup, pattern: str) -> list[list[str]]:
+    """Rows of the first table whose nearest preceding heading/paragraph matches the regex."""
+    for table in soup.find_all("table"):
+        prev = table.find_previous(["h1", "h2", "h3", "h4", "h5", "h6", "strong", "b", "p"])
+        if prev is not None and re.search(pattern, clean(prev.get_text()), re.I):
+            return table_rows(table)
+    raise ValueError(f"no table under heading: {pattern}")
