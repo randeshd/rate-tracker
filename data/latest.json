@@ -624,7 +624,199 @@
       ],
       "last_success": "2026-10-05T21:28:30+05:30",
       "error": ""
+    },
+    "plc": {
+      "id": "plc",
+      "name": "People's Leasing & Finance",
+      "type": "finance",
+      "source_url": "https://www.plc.lk/products/fixed-deposits-savings/fixed-deposits/",
+      "checked_at": "2026-10-05T21:29:40+05:30",
+      "status": "ok",
+      "rates": [
+        {
+          "tenure_months": 1,
+          "nominal_pct": 9.0,
+          "aer_pct": 9.3807,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 2,
+          "nominal_pct": 9.0,
+          "aer_pct": 9.3443,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 3,
+          "nominal_pct": 10.59,
+          "aer_pct": 11.018,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 3,
+          "nominal_pct": 10.59,
+          "aer_pct": 11.0036,
+          "note": "100 days",
+          "days": 100
+        },
+        {
+          "tenure_months": 6,
+          "nominal_pct": 11.38,
+          "aer_pct": 11.7038,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 7,
+          "nominal_pct": 11.38,
+          "aer_pct": 11.6481,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 10,
+          "nominal_pct": 11.38,
+          "aer_pct": 11.4926,
+          "note": "300 days",
+          "days": 300
+        },
+        {
+          "tenure_months": 12,
+          "nominal_pct": 12.0,
+          "aer_pct": 12.0,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 13,
+          "nominal_pct": 10.25,
+          "aer_pct": 10.2079,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 15,
+          "nominal_pct": 10.25,
+          "aer_pct": 10.125,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 17,
+          "nominal_pct": 10.5,
+          "aer_pct": 10.2839,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 18,
+          "nominal_pct": 10.5,
+          "aer_pct": 10.2421,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 24,
+          "nominal_pct": 12.25,
+          "aer_pct": 11.5796,
+          "note": "",
+          "days": null
+        }
+      ],
+      "last_success": "2026-10-05T21:29:40+05:30",
+      "error": ""
+    },
+    "cdb": {
+      "id": "cdb",
+      "name": "CDB",
+      "type": "finance",
+      "source_url": "https://www.cdb.lk/rates-tariffs",
+      "checked_at": "2026-10-05T21:29:20+05:30",
+      "status": "ok",
+      "rates": [
+        {
+          "tenure_months": 1,
+          "nominal_pct": 8.0,
+          "aer_pct": 8.3,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 3,
+          "nominal_pct": 8.5,
+          "aer_pct": 8.7748,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 4,
+          "nominal_pct": 10.6,
+          "aer_pct": 10.9789,
+          "note": "Special tenure",
+          "days": null
+        },
+        {
+          "tenure_months": 6,
+          "nominal_pct": 9.0,
+          "aer_pct": 9.2025,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 7,
+          "nominal_pct": 11.38,
+          "aer_pct": 11.6481,
+          "note": "Special tenure",
+          "days": null
+        },
+        {
+          "tenure_months": 9,
+          "nominal_pct": 9.0,
+          "aer_pct": 9.0998,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 12,
+          "nominal_pct": 10.0,
+          "aer_pct": 10.0,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 13,
+          "nominal_pct": 12.0,
+          "aer_pct": 11.9426,
+          "note": "Special tenure",
+          "days": null
+        },
+        {
+          "tenure_months": 15,
+          "nominal_pct": 10.0,
+          "aer_pct": 9.8809,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 18,
+          "nominal_pct": 10.0,
+          "aer_pct": 9.7653,
+          "note": "",
+          "days": null
+        },
+        {
+          "tenure_months": 24,
+          "nominal_pct": 10.5,
+          "aer_pct": 10.0,
+          "note": "",
+          "days": null
+        }
+      ],
+      "last_success": "2026-10-05T21:29:20+05:30",
+      "error": ""
     }
   },
-  "updated_at": "2026-10-05T21:28:30+05:30"
+  "updated_at": "2026-10-05T21:29:40+05:30"
 }
