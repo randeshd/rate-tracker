@@ -1,18 +1,20 @@
 """CBSL maximum deposit rates for finance companies (reference only).
 
-Finance Business Act Directions No. 01 of 2025: the maximum annual nominal rate for
-deposits paying interest at maturity is a Treasury bill yield plus a margin, reviewed
-quarterly using the simple average of the last four primary auctions of the previous
-quarter. The rule applies to licensed finance companies, not banks.
+Finance Business Act Directions No. 01 of 2025, as amended by No. 01 of 2026: the maximum
+annual nominal rate for deposits paying interest at maturity is a Treasury bill yield plus
+a margin, reviewed quarterly using the simple average of the last four primary auctions of
+the previous quarter. It covers tenures from one month to less than two years and applies
+to licensed finance companies, not banks.
 
 T-bill yields are read from CBSL's Weekly Economic Indicators (published on Fridays,
-covering that week's auction), so the result is a close approximation of the official figure.
+covering that week's auction).
 
 Usage: python -m scrapers.cbsl
 """
 import io
 import re
 from datetime import date, datetime, timedelta, timezone
+from decimal import ROUND_HALF_UP, Decimal
 
 import pdfplumber
 import requests
@@ -20,19 +22,22 @@ import requests
 from .core import store
 from .core.fetch import fetch
 
-DIRECTION_URL = "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/laws/cdg/snbfi_finance_business_act_directions_no_1_of_2025_e.pdf"
+DIRECTION_URL = "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/laws/cdg/snbfi_finance_business_act_directions_no_1_of_2026_e.pdf"
 WEI_URL = "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_{:%Y%m%d}_e{}.pdf"
 CBSL_FILE = store.DATA_DIR / "cbsl.json"
 
 # (from months, up to but excluding months, T-bill tenor in days, margin in % points)
 BANDS = [
-    (1, 3, 91, 0.10),
-    (3, 6, 182, 0.25),
-    (6, 12, 364, 0.50),
-    (12, 24, 364, 2.00),
-    (24, 36, 364, 2.75),
+    (1, 3, 91, 1.10),
+    (3, 6, 182, 1.25),
+    (6, 12, 364, 1.50),
+    (12, 24, 364, 3.00),
 ]
 AUCTIONS = 4
+
+
+def _round2(value: float) -> float:
+    return float(Decimal(str(round(value, 6))).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP))
 
 
 def previous_quarter(today: date) -> tuple[str, date]:
@@ -94,7 +99,7 @@ def compute(today: date) -> dict:
         "tbill_average": {str(k): v for k, v in average.items()},
         "weeks": weeks,
         "bands": [
-            {"from_months": lo, "to_months": hi, "tbill_days": t, "margin": m, "max_nominal_pct": round(average[t] + m, 2)}
+            {"from_months": lo, "to_months": hi, "tbill_days": t, "margin": m, "max_nominal_pct": _round2(average[t] + m)}
             for lo, hi, t, m in BANDS
         ],
     }

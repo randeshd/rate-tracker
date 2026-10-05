@@ -1,7 +1,7 @@
 {
   "based_on_quarter": "2026-Q3",
   "applies_to": "finance",
-  "source_url": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/laws/cdg/snbfi_finance_business_act_directions_no_1_of_2025_e.pdf",
+  "source_url": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/laws/cdg/snbfi_finance_business_act_directions_no_1_of_2026_e.pdf",
   "tbill_average": {
     "91": 9.165,
     "182": 9.345,
@@ -38,38 +38,31 @@
       "from_months": 1,
       "to_months": 3,
       "tbill_days": 91,
-      "margin": 0.1,
-      "max_nominal_pct": 9.26
+      "margin": 1.1,
+      "max_nominal_pct": 10.27
     },
     {
       "from_months": 3,
       "to_months": 6,
       "tbill_days": 182,
-      "margin": 0.25,
-      "max_nominal_pct": 9.6
+      "margin": 1.25,
+      "max_nominal_pct": 10.6
     },
     {
       "from_months": 6,
       "to_months": 12,
       "tbill_days": 364,
-      "margin": 0.5,
-      "max_nominal_pct": 10.38
+      "margin": 1.5,
+      "max_nominal_pct": 11.38
     },
     {
       "from_months": 12,
       "to_months": 24,
       "tbill_days": 364,
-      "margin": 2.0,
-      "max_nominal_pct": 11.88
-    },
-    {
-      "from_months": 24,
-      "to_months": 36,
-      "tbill_days": 364,
-      "margin": 2.75,
-      "max_nominal_pct": 12.63
+      "margin": 3.0,
+      "max_nominal_pct": 12.88
     }
   ],
-  "updated_at": "2026-10-05T21:34:58+05:30",
+  "updated_at": "2026-10-05T22:13:32+05:30",
   "stale": false
 }
