@@ -186,3 +186,11 @@ th {
   color: var(--text);
   border-bottom-color: var(--text);
 }
+
+table.grid td.top {
+  background: #d9f2e6;
+  box-shadow: inset 0 0 0 1px #9fd8bd;
+}
+table.grid td.top .aer {
+  font-weight: 800;
+}
