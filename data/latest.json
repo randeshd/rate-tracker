@@ -1,0 +1,53 @@
+{
+  "institutions": {
+    "peoples_bank": {
+      "id": "peoples_bank",
+      "name": "People's Bank",
+      "type": "bank",
+      "source_url": "https://www.peoplesbank.lk/interest-rates/",
+      "checked_at": "2026-10-05T21:21:08+05:30",
+      "status": "ok",
+      "rates": [
+        {
+          "tenure_months": 1,
+          "nominal_pct": 6.75,
+          "aer_pct": 6.9628,
+          "note": ""
+        },
+        {
+          "tenure_months": 3,
+          "nominal_pct": 7.25,
+          "aer_pct": 7.4495,
+          "note": ""
+        },
+        {
+          "tenure_months": 6,
+          "nominal_pct": 7.5,
+          "aer_pct": 7.6406,
+          "note": ""
+        },
+        {
+          "tenure_months": 12,
+          "nominal_pct": 8.5,
+          "aer_pct": 8.5,
+          "note": ""
+        },
+        {
+          "tenure_months": 24,
+          "nominal_pct": 9.4,
+          "aer_pct": 8.9954,
+          "note": ""
+        },
+        {
+          "tenure_months": 24,
+          "nominal_pct": 10.0,
+          "aer_pct": 9.5445,
+          "note": "People's Wealth (min Rs. 250,000, new deposits)"
+        }
+      ],
+      "last_success": "2026-10-05T21:21:08+05:30",
+      "error": ""
+    }
+  },
+  "updated_at": "2026-10-05T21:21:08+05:30"
+}
