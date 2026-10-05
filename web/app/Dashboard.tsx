@@ -14,22 +14,29 @@ import {
   tenureLabel,
 } from "@/lib/rates";
 
+const DIRECTIONS_URL =
+  "https://www.cbsl.gov.lk/en/laws/directions-circulars-guidelines-for-non-banks";
+
 type Row = { institution: Institution; rate: Rate };
 
 export default function Dashboard({ data }: { data: TrackerData }) {
   // 0 means "best across all tenures", -1 means the all-tenures grid
   const [tenure, setTenure] = useState(12);
+  const [type, setType] = useState<"all" | "bank" | "finance">("all");
+  const institutions = data.institutions.filter(
+    (i) => type === "all" || i.type === type,
+  );
   const others = otherTenures(data.institutions);
   const best = tenure === 0;
 
   const rows: Row[] = best
-    ? data.institutions
+    ? institutions
         .flatMap((institution) => {
           const rate = bestOffer(institution);
           return rate ? [{ institution, rate }] : [];
         })
         .sort((a, b) => b.rate.aer_pct - a.rate.aer_pct)
-    : offersForTenure(data.institutions, tenure);
+    : offersForTenure(institutions, tenure);
   const grid = tenure === -1;
   const ceiling = best || grid ? null : ceilingFor(data.ceiling, tenure);
   const newDirections = data.ceiling?.unreviewed_directions ?? [];
@@ -82,14 +89,40 @@ export default function Dashboard({ data }: { data: TrackerData }) {
         </button>
       </nav>
 
+      <div className="filter">
+        {(["all", "bank", "finance"] as const).map((t) => (
+          <button
+            key={t}
+            className={type === t ? "active" : ""}
+            onClick={() => setType(t)}
+          >
+            {t === "all" ? "All" : t === "bank" ? "Banks" : "Finance companies"}
+          </button>
+        ))}
+      </div>
+
       {ceilingDoubt && (
         <p className="warning">
-          The CBSL ceiling shown may be out of date.{" "}
-          {newDirections.map((d) => (
-            <a key={d.url} href={d.url} target="_blank" rel="noreferrer">
-              New CBSL direction: {d.title}
-            </a>
-          ))}
+          The CBSL ceiling may be out of date.{" "}
+          {newDirections.length > 0 ? (
+            <>
+              CBSL has published{" "}
+              <a href={newDirections[0].url} target="_blank" rel="noreferrer">
+                a new direction on deposit rates
+              </a>
+              . Open it, then ask Claude to update the ceiling margins with the
+              table in that document.
+            </>
+          ) : (
+            <>
+              Several finance companies are advertising above it. Check{" "}
+              <a href={DIRECTIONS_URL} target="_blank" rel="noreferrer">
+                CBSL&apos;s directions
+              </a>{" "}
+              for a new one on maximum deposit rates, then ask Claude to update
+              the ceiling margins.
+            </>
+          )}
         </p>
       )}
       {!best && !grid && (
@@ -104,7 +137,7 @@ export default function Dashboard({ data }: { data: TrackerData }) {
       )}
 
       {grid ? (
-        <Grid data={data} />
+        <Grid institutions={institutions} data={data} />
       ) : (
         <div className="table-wrap">
           <table>
@@ -186,10 +219,16 @@ export default function Dashboard({ data }: { data: TrackerData }) {
   );
 }
 
-function Grid({ data }: { data: TrackerData }) {
+function Grid({
+  institutions,
+  data,
+}: {
+  institutions: Institution[];
+  data: TrackerData;
+}) {
   const [sortBy, setSortBy] = useState(12);
   const aer = (i: Institution, m: number) => bestOffer(i, m)?.aer_pct ?? -1;
-  const rows = [...data.institutions].sort(
+  const rows = [...institutions].sort(
     (a, b) => aer(b, sortBy) - aer(a, sortBy),
   );
   const top = Object.fromEntries(
