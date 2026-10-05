@@ -104,6 +104,8 @@ export default function Dashboard({ data }: { data: TrackerData }) {
   const byType = (t: Institution["type"]) =>
     data.institutions.filter((i) => i.type === t);
   const overall = topOffer(data.institutions, scope);
+  // Phone header figure: fixed, whatever view, tenure or type is selected
+  const highest = topOffer(data.institutions);
 
   const newDirections = data.ceiling?.unreviewed_directions ?? [];
   const aboveCeiling = institutionsAboveCeiling(
@@ -130,19 +132,17 @@ export default function Dashboard({ data }: { data: TrackerData }) {
             Find where your fixed deposit <em>earns the most.</em>
           </h1>
           <div className="hero-best">
-            <div className="hero-best-label">
-              Best AER · {scope ? monthsLabel(scope) : "any tenure"}
-            </div>
+            <div className="hero-best-label">Highest AER on offer</div>
             <div className="hero-best-value">
-              {overall ? pct(overall.rate.aer_pct) : "–"}
+              {highest ? pct(highest.rate.aer_pct) : "–"}
             </div>
             <div className="hero-best-name">
-              {overall ? (
+              {highest ? (
                 <>
-                  {overall.institution.name}{" "}
+                  {highest.institution.name}{" "}
                   <span>
-                    · {pct(overall.rate.nominal_pct)} p.a. nominal
-                    {!scope && ` · ${tenureLabel(overall.rate)}`}
+                    · {tenureLabel(highest.rate)} ·{" "}
+                    {pct(highest.rate.nominal_pct)} p.a. nominal
                   </span>
                 </>
               ) : (

@@ -11,6 +11,26 @@ Private web app comparing Sri Lankan fixed deposit rates (interest paid at matur
 3. **The web page** (`web/`, Next.js on Vercel) is rebuilt from `data/` on every commit and sits behind a
    password (`SITE_PASSWORD` environment variable in Vercel).
 
+## The web page
+
+One page (`web/app/Dashboard.tsx`, styled in `web/app/globals.css`) with three views, each filterable to
+banks or finance companies:
+
+- **By tenure**: every offer at the chosen tenure, ranked by AER, with credit ratings.
+- **All tenures**: one row per institution across the standard tenures, the best AER in each tenure in
+  green, and the CBSL ceiling for finance companies on top.
+- **Best AER**: each institution's highest offer at any tenure.
+
+Summary cards show the best overall, best bank and best finance company rate for the chosen tenure.
+Each shows AER; click a card to switch it to the nominal rate p.a. and back.
+
+On phones (760px wide or less) the list becomes cards and the views move to a tab bar at the bottom.
+The header shows the highest AER on offer across every institution and tenure, and in All tenures
+tapping a rate shows its nominal rate p.a.
+
+The logo is `web/app/Logo.tsx`. The icons are `icon.svg`, `favicon.ico` and `apple-icon.png` in
+`web/app/`.
+
 ## Data files
 
 | File | Contents |
