@@ -47,7 +47,73 @@
       ],
       "last_success": "2026-10-05T21:21:08+05:30",
       "error": ""
+    },
+    "hnb": {
+      "id": "hnb",
+      "name": "HNB",
+      "type": "bank",
+      "source_url": "https://www.hnb.lk/interest-rates",
+      "checked_at": "2026-10-05T21:22:08+05:30",
+      "status": "ok",
+      "rates": [
+        {
+          "tenure_months": 1,
+          "nominal_pct": 8.0,
+          "aer_pct": 8.3,
+          "note": ""
+        },
+        {
+          "tenure_months": 3,
+          "nominal_pct": 9.0,
+          "aer_pct": 9.3083,
+          "note": ""
+        },
+        {
+          "tenure_months": 4,
+          "nominal_pct": 9.5,
+          "aer_pct": 9.804,
+          "note": "Special FD (non renewable)"
+        },
+        {
+          "tenure_months": 6,
+          "nominal_pct": 9.75,
+          "aer_pct": 9.9877,
+          "note": ""
+        },
+        {
+          "tenure_months": 9,
+          "nominal_pct": 10.5,
+          "aer_pct": 10.6355,
+          "note": "Special FD (non renewable)"
+        },
+        {
+          "tenure_months": 12,
+          "nominal_pct": 10.0,
+          "aer_pct": 10.0,
+          "note": ""
+        },
+        {
+          "tenure_months": 15,
+          "nominal_pct": 12.0,
+          "aer_pct": 11.83,
+          "note": "Special FD (non renewable)"
+        },
+        {
+          "tenure_months": 18,
+          "nominal_pct": 12.0,
+          "aer_pct": 11.6661,
+          "note": "Special FD (non renewable)"
+        },
+        {
+          "tenure_months": 24,
+          "nominal_pct": 12.0,
+          "aer_pct": 11.3553,
+          "note": ""
+        }
+      ],
+      "last_success": "2026-10-05T21:22:08+05:30",
+      "error": ""
     }
   },
-  "updated_at": "2026-10-05T21:21:08+05:30"
+  "updated_at": "2026-10-05T21:22:08+05:30"
 }
