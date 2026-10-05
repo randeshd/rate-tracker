@@ -12,7 +12,7 @@ class Rate:
     tenure_months: int
     nominal_pct: float  # annual rate, interest paid at maturity
     aer_pct: float = field(init=False)
-    note: str = ""  # e.g. name of a special offer
+    note: str = ""  # empty for the standard FD; otherwise the name/conditions of a special offer
 
     def __post_init__(self):
         self.aer_pct = aer_at_maturity(self.nominal_pct, self.tenure_months)
@@ -27,7 +27,10 @@ class Institution:
 
 
 def validate(rates: list[Rate]) -> list[Rate]:
-    """Drop tenures beyond 24 months, reject implausible values, sort by tenure."""
+    """Drop tenures beyond 24 months, reject implausible values, sort by tenure.
+
+    One rate per (tenure, note): a special offer can sit alongside the standard rate.
+    """
     if not rates:
         raise ValueError("no rates found")
     seen = {}
@@ -36,7 +39,7 @@ def validate(rates: list[Rate]) -> list[Rate]:
             continue
         if not 1.0 <= r.nominal_pct <= 40.0:
             raise ValueError(f"implausible rate {r.nominal_pct}% for {r.tenure_months}m")
-        seen[r.tenure_months] = r
+        seen[(r.tenure_months, r.note)] = r
     if not seen:
         raise ValueError("no rates within 1-24 months")
     return [seen[k] for k in sorted(seen)]
