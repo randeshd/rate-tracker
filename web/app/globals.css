@@ -60,7 +60,7 @@ h1 {
   background: #f4f5f7;
   border: none;
   border-radius: 999px;
-  padding: 7px 16px;
+  padding: 7px 13px;
   cursor: pointer;
 }
 select.pill {
@@ -71,7 +71,7 @@ select.pill {
   background: var(--text);
   color: #fff;
 }
-.pill.best {
+.pill.push {
   margin-left: auto;
 }
 
@@ -133,7 +133,36 @@ th {
   padding: 40px;
 }
 .ceiling {
-  margin: 16px 12px 0;
-  font-size: 13px;
+  margin: 0 12px 8px;
+  font-size: 14px;
   color: var(--muted);
+}
+.ceiling strong {
+  color: var(--text);
+}
+.warning {
+  margin: 0 12px 12px;
+  font-size: 14px;
+  color: var(--warn);
+}
+.warning a {
+  color: inherit;
+}
+.ceiling-row td {
+  color: var(--muted);
+}
+.aer.plain {
+  color: var(--text);
+  font-weight: 500;
+}
+.sort {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.sort.active {
+  color: var(--text);
 }

@@ -47,3 +47,18 @@ export function shortDate(iso: string): string {
     ? iso
     : d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "Asia/Colombo" });
 }
+
+/**
+ * Finance companies advertising above the computed ceiling: a sign that CBSL has
+ * changed the rule and the ceiling shown is out of date.
+ */
+export function institutionsAboveCeiling(institutions: Institution[], ceiling: Ceiling): number {
+  return institutions.filter(
+    (i) =>
+      i.type === "finance" &&
+      i.rates.some((r) => {
+        const c = ceilingFor(ceiling, r.tenure_months);
+        return c !== null && r.nominal_pct > c.nominal + 0.05;
+      }),
+  ).length;
+}

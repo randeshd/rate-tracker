@@ -41,6 +41,7 @@ export type Ceiling = {
   based_on_quarter: string;
   source_url: string;
   stale?: boolean;
+  unreviewed_directions?: { title: string; url: string }[];
   bands: CeilingBand[];
 } | null;
 
