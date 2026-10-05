@@ -817,24 +817,6 @@ ol {
     font-size: 12px;
   }
 
-  /*
-   * Fades the list out as it passes under the tab bar. It runs past the bottom
-   * edge so the list stays hidden behind a browser toolbar that overlays the page.
-   */
-  .page::after {
-    --overhang: 200px;
-    --solid: calc(var(--overhang) + 50px + env(safe-area-inset-bottom, 0px));
-    content: "";
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: calc(-1 * var(--overhang));
-    z-index: 9;
-    height: calc(var(--solid) + 64px);
-    pointer-events: none;
-    background: linear-gradient(to top, var(--ground) var(--solid), transparent);
-  }
-
   .tabbar {
     position: fixed;
     left: 50%;
@@ -846,7 +828,9 @@ ol {
     padding: 6px;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.86);
-    box-shadow: 0 8px 24px rgba(14, 14, 16, 0.18);
+    box-shadow:
+      0 2px 6px rgba(14, 14, 16, 0.12),
+      0 14px 36px rgba(14, 14, 16, 0.32);
     backdrop-filter: blur(8px);
   }
   .tabbar button {
