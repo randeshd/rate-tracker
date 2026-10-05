@@ -6,7 +6,7 @@ from pathlib import Path
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 LATEST = DATA_DIR / "latest.json"
 HISTORY = DATA_DIR / "history" / "rates.csv"
-HISTORY_FIELDS = ["date", "institution_id", "tenure_months", "nominal_pct", "aer_pct", "note"]
+HISTORY_FIELDS = ["date", "institution_id", "tenure_months", "nominal_pct", "aer_pct", "note", "days"]
 
 
 def load_json(path: Path, default):

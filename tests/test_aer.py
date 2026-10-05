@@ -26,3 +26,10 @@ def test_validate_drops_long_tenures_and_sorts():
 def test_validate_rejects_implausible():
     with pytest.raises(ValueError):
         validate([Rate(12, 0.08)])
+
+
+def test_day_count_terms_use_exact_days():
+    r = Rate.for_days(400, 10.5, "Special FD")
+    assert r.tenure_months == 13
+    assert r.note == "400 days, Special FD"
+    assert r.aer_pct == pytest.approx(10.45, abs=0.01)  # matches the AER DFCC publishes
