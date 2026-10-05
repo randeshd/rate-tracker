@@ -12,14 +12,12 @@ covering that week's auction).
 The margins come from the directions themselves, which CBSL publishes as scanned PDFs, so
 they are written into BANDS below. To catch a future amendment, every run also checks
 CBSL's list of directions: a deposit-rate direction that is not in KNOWN_DIRECTIONS is
-recorded in data/cbsl.json (the web page then shows a warning) and `--alert` exits with an
-error so the GitHub Actions run fails and sends a notification.
+recorded in data/cbsl.json and the web page then shows a notice saying what to do.
 
-Usage: python -m scrapers.cbsl [--alert]
+Usage: python -m scrapers.cbsl
 """
 import io
 import re
-import sys
 from urllib.parse import urljoin
 from datetime import date, datetime, timedelta, timezone
 from decimal import ROUND_HALF_UP, Decimal
@@ -135,7 +133,7 @@ def unreviewed_directions() -> list[dict]:
     return list(found.values())
 
 
-def run(alert: bool = False) -> None:
+def run() -> None:
     now = datetime.now(timezone(timedelta(hours=5, minutes=30)))
     current = store.load_json(CBSL_FILE, {})
     quarter, _ = previous_quarter(now.date())
@@ -161,12 +159,9 @@ def run(alert: bool = False) -> None:
         print(f"Could not check CBSL directions list: {type(e).__name__}: {e}")
     store.save_json(CBSL_FILE, result)
 
-    pending = result.get("unreviewed_directions", [])
-    for d in pending:
+    for d in result.get("unreviewed_directions", []):
         print(f"NEW CBSL DIRECTION, ceiling margins need review: {d['title']} {d['url']}")
-    if alert and pending:
-        sys.exit(1)
 
 
 if __name__ == "__main__":
-    run(alert="--alert" in sys.argv)
+    run()

@@ -36,5 +36,3 @@ jobs:
           git commit -m "Update rates $(TZ=Asia/Colombo date +%F)"
           git pull --rebase
           git push
-      - name: Fail (and notify) if CBSL has published a new deposit-rate direction
-        run: python -m scrapers.cbsl --alert
