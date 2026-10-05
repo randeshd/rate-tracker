@@ -113,7 +113,67 @@
       ],
       "last_success": "2026-10-05T21:22:08+05:30",
       "error": ""
+    },
+    "seylan": {
+      "id": "seylan",
+      "name": "Seylan Bank",
+      "type": "bank",
+      "source_url": "https://www.seylan.lk/interest-rates",
+      "checked_at": "2026-10-05T21:23:05+05:30",
+      "status": "ok",
+      "rates": [
+        {
+          "tenure_months": 1,
+          "nominal_pct": 8.0,
+          "aer_pct": 8.3,
+          "note": "Millennium'30 (min Rs. 100,000)"
+        },
+        {
+          "tenure_months": 2,
+          "nominal_pct": 8.25,
+          "aer_pct": 8.5388,
+          "note": ""
+        },
+        {
+          "tenure_months": 3,
+          "nominal_pct": 9.0,
+          "aer_pct": 9.3083,
+          "note": ""
+        },
+        {
+          "tenure_months": 5,
+          "nominal_pct": 10.5,
+          "aer_pct": 10.8234,
+          "note": "Min Rs. 500,000"
+        },
+        {
+          "tenure_months": 6,
+          "nominal_pct": 9.75,
+          "aer_pct": 9.9877,
+          "note": ""
+        },
+        {
+          "tenure_months": 7,
+          "nominal_pct": 11.0,
+          "aer_pct": 11.2506,
+          "note": "Min Rs. 500,000"
+        },
+        {
+          "tenure_months": 12,
+          "nominal_pct": 10.0,
+          "aer_pct": 10.0,
+          "note": ""
+        },
+        {
+          "tenure_months": 24,
+          "nominal_pct": 11.0,
+          "aer_pct": 10.4536,
+          "note": ""
+        }
+      ],
+      "last_success": "2026-10-05T21:23:05+05:30",
+      "error": ""
     }
   },
-  "updated_at": "2026-10-05T21:22:08+05:30"
+  "updated_at": "2026-10-05T21:23:05+05:30"
 }
