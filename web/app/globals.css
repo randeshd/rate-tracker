@@ -495,6 +495,24 @@ ol {
   color: var(--muted);
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 4px 22px 12px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.footer p {
+  margin: 0;
+  max-width: 900px;
+}
+.footer strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
 .tabbar {
   display: none;
 }
@@ -814,6 +832,10 @@ ol {
   }
   .grid-key {
     padding: 0 6px;
+    font-size: 12px;
+  }
+  .footer {
+    padding: 20px 20px calc(100px + env(safe-area-inset-bottom, 0px));
     font-size: 12px;
   }
 

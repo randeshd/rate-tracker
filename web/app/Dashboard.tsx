@@ -13,6 +13,7 @@ import {
   otherTenures,
   pct,
   shortDate,
+  shortDateTime,
   tenureLabel,
   topOffer,
 } from "@/lib/rates";
@@ -382,6 +383,27 @@ export default function Dashboard({ data }: { data: TrackerData }) {
           </button>
         ))}
       </nav>
+      <footer className="footer">
+        <p>
+          <strong>Rates are indicative.</strong> Fixed deposit rates (interest
+          paid at maturity, normal rates) are collected each morning from each
+          institution&rsquo;s published rate page. Confirm the current rate with
+          the institution before depositing.
+        </p>
+        <p>
+          <strong>AER</strong> is the annual effective rate, which lets you
+          compare deposits with different payout terms. The CBSL ceiling applies
+          to licensed finance companies only. Credit ratings come from Lanka
+          Rating Agency and Fitch disclosures, and are refreshed weekly.
+        </p>
+        <p>
+          Rate Tracker is an independent comparison tool, not financial advice,
+          and is not affiliated with any bank or finance company.
+          {data.updatedAt && (
+            <> Last data refresh: {shortDateTime(data.updatedAt)}.</>
+          )}
+        </p>
+      </footer>
     </div>
   );
 }

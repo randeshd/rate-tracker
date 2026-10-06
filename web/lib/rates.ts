@@ -48,6 +48,16 @@ export function shortDate(iso: string): string {
     : d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "Asia/Colombo" });
 }
 
+export function shortDateTime(iso: string): string {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return iso;
+  const opts = { timeZone: "Asia/Colombo" } as const;
+  const date = d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", ...opts });
+  const time = d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", ...opts });
+  return `${date}, ${time}`;
+}
+
 /**
  * Finance companies advertising above the computed ceiling: a sign that CBSL has
  * changed the rule and the ceiling shown is out of date.
