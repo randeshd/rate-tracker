@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T15:51:23+05:30",
+  "updated_at": "2026-11-02T18:13:18+05:30",
   "institutions": {
     "peoples_bank": [
       {
@@ -9,7 +9,7 @@
         "date": "2024-09-06",
         "source": "Lanka Rating Agency ratings list",
         "source_url": "https://lra.com.lk/ratings/",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       }
     ],
     "hnb": [],
@@ -21,7 +21,7 @@
         "date": "",
         "source": "As stated on the institution's website",
         "source_url": "https://www.seylan.lk/interest-rates",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       }
     ],
     "ndb": [
@@ -32,7 +32,7 @@
         "date": "",
         "source": "As stated on the institution's website",
         "source_url": "https://www.ndbbank.com/rates/interest-rates-on-deposits",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       }
     ],
     "dfcc": [
@@ -43,7 +43,7 @@
         "date": "",
         "source": "As stated on the institution's website",
         "source_url": "https://www.dfcc.lk/rates-and-tariff?tab=fixed_deposits",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       }
     ],
     "lb_finance": [
@@ -54,7 +54,7 @@
         "date": "",
         "source": "As stated on the institution's website",
         "source_url": "https://www.lbfinance.com/fixed-deposits/fixed-deposits",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       },
       {
         "agency": "Lanka Rating Agency",
@@ -63,7 +63,7 @@
         "date": "2026-01-28",
         "source": "Lanka Rating Agency ratings list",
         "source_url": "https://lra.com.lk/ratings/",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       }
     ],
     "lolc_finance": [
@@ -74,7 +74,7 @@
         "date": "2026-09-01",
         "source": "Lanka Rating Agency ratings list",
         "source_url": "https://lra.com.lk/ratings/",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       }
     ],
     "central_finance": [
@@ -85,7 +85,7 @@
         "date": "",
         "source": "As stated on the institution's website",
         "source_url": "https://cf.lk/interest-rates/",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       }
     ],
     "plc": [
@@ -108,7 +108,7 @@
         "date": "",
         "source": "As stated on the institution's website",
         "source_url": "https://www.cdb.lk/rates-tariffs",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       },
       {
         "agency": "Lanka Rating Agency",
@@ -117,7 +117,7 @@
         "date": "2026-08-07",
         "source": "Lanka Rating Agency ratings list",
         "source_url": "https://lra.com.lk/ratings/",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       }
     ],
     "singer_finance": [
@@ -128,7 +128,7 @@
         "date": "",
         "source": "As stated on the institution's website",
         "source_url": "https://www.singerfinance.com/products/fixed-deposit/standard-fixed-deposits",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       }
     ],
     "siyapatha": [
@@ -139,7 +139,7 @@
         "date": "",
         "source": "As stated on the institution's website",
         "source_url": "https://www.siyapatha.lk/fixed-deposits/",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       }
     ],
     "hnb_finance": [
@@ -150,7 +150,7 @@
         "date": "",
         "source": "As stated on the institution's website",
         "source_url": "https://www.hnbfinance.lk/fixed-deposits/",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       }
     ],
     "mercantile": [
@@ -161,7 +161,7 @@
         "date": "",
         "source": "As stated on the institution's website",
         "source_url": "https://www.mi.com.lk/index.php/en/products-and-services/main-products/fixed-deposit",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       }
     ],
     "vallibel": [
@@ -172,7 +172,7 @@
         "date": "2026-09-02",
         "source": "Lanka Rating Agency ratings list",
         "source_url": "https://lra.com.lk/ratings/",
-        "checked_at": "2026-10-26T15:51:23+05:30"
+        "checked_at": "2026-11-02T18:13:18+05:30"
       }
     ]
   }
