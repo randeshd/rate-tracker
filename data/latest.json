@@ -5,7 +5,7 @@
       "name": "People's Bank",
       "type": "bank",
       "source_url": "https://www.peoplesbank.lk/interest-rates/",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "ok",
       "rates": [
         {
@@ -51,7 +51,7 @@
           "days": null
         }
       ],
-      "last_success": "2026-11-06T16:49:57+05:30",
+      "last_success": "2026-11-07T16:03:50+05:30",
       "error": ""
     },
     "hnb": {
@@ -59,7 +59,7 @@
       "name": "HNB",
       "type": "bank",
       "source_url": "https://www.hnb.lk/interest-rates",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "ok",
       "rates": [
         {
@@ -126,7 +126,7 @@
           "days": null
         }
       ],
-      "last_success": "2026-11-06T16:49:57+05:30",
+      "last_success": "2026-11-07T16:03:50+05:30",
       "error": ""
     },
     "seylan": {
@@ -134,7 +134,7 @@
       "name": "Seylan Bank",
       "type": "bank",
       "source_url": "https://www.seylan.lk/interest-rates",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "ok",
       "rates": [
         {
@@ -194,7 +194,7 @@
           "days": null
         }
       ],
-      "last_success": "2026-11-06T16:49:57+05:30",
+      "last_success": "2026-11-07T16:03:50+05:30",
       "error": ""
     },
     "dfcc": {
@@ -202,7 +202,7 @@
       "name": "DFCC Bank",
       "type": "bank",
       "source_url": "https://www.dfcc.lk/rates-and-tariff?tab=fixed_deposits",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "ok",
       "rates": [
         {
@@ -276,7 +276,7 @@
           "days": null
         }
       ],
-      "last_success": "2026-11-06T16:49:57+05:30",
+      "last_success": "2026-11-07T16:03:50+05:30",
       "error": ""
     },
     "ndb": {
@@ -284,7 +284,7 @@
       "name": "NDB Bank",
       "type": "bank",
       "source_url": "https://www.ndbbank.com/rates/interest-rates-on-deposits",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "ok",
       "rates": [
         {
@@ -386,7 +386,7 @@
           "days": null
         }
       ],
-      "last_success": "2026-11-06T16:49:57+05:30",
+      "last_success": "2026-11-07T16:03:50+05:30",
       "error": ""
     },
     "lb_finance": {
@@ -394,7 +394,7 @@
       "name": "LB Finance",
       "type": "finance",
       "source_url": "https://www.lbfinance.com/fixed-deposits/fixed-deposits",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "ok",
       "rates": [
         {
@@ -468,7 +468,7 @@
           "days": null
         }
       ],
-      "last_success": "2026-11-06T16:49:57+05:30",
+      "last_success": "2026-11-07T16:03:50+05:30",
       "error": ""
     },
     "lolc_finance": {
@@ -476,7 +476,7 @@
       "name": "LOLC Finance",
       "type": "finance",
       "source_url": "https://www.lolcfinance.com/rates-and-returns/interest-rates/",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "ok",
       "rates": [
         {
@@ -543,7 +543,7 @@
           "days": null
         }
       ],
-      "last_success": "2026-11-06T16:49:57+05:30",
+      "last_success": "2026-11-07T16:03:50+05:30",
       "error": ""
     },
     "central_finance": {
@@ -551,7 +551,7 @@
       "name": "Central Finance",
       "type": "finance",
       "source_url": "https://cf.lk/interest-rates/",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "ok",
       "rates": [
         {
@@ -611,7 +611,7 @@
           "days": null
         }
       ],
-      "last_success": "2026-11-06T16:49:57+05:30",
+      "last_success": "2026-11-07T16:03:50+05:30",
       "error": ""
     },
     "plc": {
@@ -619,7 +619,7 @@
       "name": "People's Leasing & Finance",
       "type": "finance",
       "source_url": "https://www.plc.lk/products/fixed-deposits-savings/fixed-deposits/",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "stale",
       "rates": [
         {
@@ -722,7 +722,7 @@
       "name": "CDB",
       "type": "finance",
       "source_url": "https://www.cdb.lk/rates-tariffs",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "ok",
       "rates": [
         {
@@ -803,7 +803,7 @@
           "days": null
         }
       ],
-      "last_success": "2026-11-06T16:49:57+05:30",
+      "last_success": "2026-11-07T16:03:50+05:30",
       "error": ""
     },
     "singer_finance": {
@@ -811,7 +811,7 @@
       "name": "Singer Finance",
       "type": "finance",
       "source_url": "https://www.singerfinance.com/products/fixed-deposit/standard-fixed-deposits",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "ok",
       "rates": [
         {
@@ -906,7 +906,7 @@
           "days": null
         }
       ],
-      "last_success": "2026-11-06T16:49:57+05:30",
+      "last_success": "2026-11-07T16:03:50+05:30",
       "error": ""
     },
     "siyapatha": {
@@ -914,7 +914,7 @@
       "name": "Siyapatha Finance",
       "type": "finance",
       "source_url": "https://www.siyapatha.lk/fixed-deposits/",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "ok",
       "rates": [
         {
@@ -988,7 +988,7 @@
           "days": null
         }
       ],
-      "last_success": "2026-11-06T16:49:57+05:30",
+      "last_success": "2026-11-07T16:03:50+05:30",
       "error": ""
     },
     "mercantile": {
@@ -996,7 +996,7 @@
       "name": "Mercantile Investments",
       "type": "finance",
       "source_url": "https://www.mi.com.lk/index.php/en/products-and-services/main-products/fixed-deposit",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "ok",
       "rates": [
         {
@@ -1091,7 +1091,7 @@
           "days": null
         }
       ],
-      "last_success": "2026-11-06T16:49:57+05:30",
+      "last_success": "2026-11-07T16:03:50+05:30",
       "error": ""
     },
     "vallibel": {
@@ -1099,7 +1099,7 @@
       "name": "Vallibel Finance",
       "type": "finance",
       "source_url": "https://vallibelfinance.com/fixed-deposits/",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "ok",
       "rates": [
         {
@@ -1180,7 +1180,7 @@
           "days": null
         }
       ],
-      "last_success": "2026-11-06T16:49:57+05:30",
+      "last_success": "2026-11-07T16:03:50+05:30",
       "error": ""
     },
     "hnb_finance": {
@@ -1188,7 +1188,7 @@
       "name": "HNB Finance",
       "type": "finance",
       "source_url": "https://www.hnbfinance.lk/fixed-deposits/",
-      "checked_at": "2026-11-06T16:49:57+05:30",
+      "checked_at": "2026-11-07T16:03:50+05:30",
       "status": "ok",
       "rates": [
         {
@@ -1276,9 +1276,9 @@
           "days": null
         }
       ],
-      "last_success": "2026-11-06T16:49:57+05:30",
+      "last_success": "2026-11-07T16:03:50+05:30",
       "error": ""
     }
   },
-  "updated_at": "2026-11-06T16:49:57+05:30"
+  "updated_at": "2026-11-07T16:03:50+05:30"
 }
